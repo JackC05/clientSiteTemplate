@@ -1,0 +1,25 @@
+#whole{
+    padding:100px;
+}
+
+body{
+    border:black; border-width:10px; border-style:solid;
+    color:white;
+	background:grey;
+    /*background: rgb(255,0,96);
+background: linear-gradient(45deg, rgba(255,0,96,1) 0%, rgba(74,133,255,1) 100%);*/
+    text-align:center;
+    font-family:helvetica, sans-serif;
+	transition:background-color 0.5s ease;
+}
+.clicked {
+  background:lightgreen;
+}
+p{
+ padding:15px;   
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}

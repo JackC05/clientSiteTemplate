@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<html>
+    <head>
+        <title>HireMe! Page - (Name)</title>
+		<link rel="stylesheet" href="style.css">
+		
+    </head>
+    <body>
+	<button style="padding:5px" class="btn btn-primary" id="gen">Random Color</button>
+        <div class="whole"></div>
+		click on the blanks to change.
+        <h1 id="Name" contenteditable="true">(Name Here)</h1>
+        <strong contenteditable="true">Pronouns: (Blank)</strong>
+        <p><strong contenteditable="true">Grade: (Blank)</strong></p>
+        <p><strong contenteditable="true">Favorite Colors: (Blank)</strong></p>
+        <p><strong contenteditable="true">Activities: (Blank)</strong></p>
+        <p><strong contenteditable="true">Where do I plan to be in Five Years?: (Blank)</strong></p>
+        <p><strong contenteditable="true">Three Things I Can't Live Without?: (Blank)</strong></p>
+        <p><strong contenteditable="true">Favorite Movie, Band, and Game?: (Blank)</strong></p>
+        <p><strong contenteditable="true">Reason to be at Nextech?: (Blank)</strong></p>
+		
+		<script>
+		$(document).ready(function(){
+setColor();
+function setColor(){
+     var colors=["#33ccff", "#ffc162","#cc6699","#ee82ee","#6a5acd","#3cb371"];
+      var color =Math.floor(Math.random() * (colors.length));
+  
+    $('body').toggleClass('clicked');
+    setTimeout(function(){
+     $('.clicked').css("background-color", colors[color]);
+    $('body').removeClass('clicked');
+    }, 200)  
+  }
+  
+   $('#gen').on("click", function(){
+    setColor();
+  });
+  
+  
+});
+</script>
+    </body>
+</html>
